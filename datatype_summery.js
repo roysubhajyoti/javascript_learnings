@@ -45,3 +45,28 @@ console.log(myobject);
 console.log(typeof myobject);
 
 
+//#########################################################################################################################
+
+// stack(primitive)   heap(Non-premitive)
+
+//stack : no change in original name as we get only the copy of myName assign to the anotherName
+let myName="Subhajytoi"
+let anotherName=myName
+console.log(anotherName);
+anotherName="SJR"
+console.log(anotherName);
+console.log(myName);
+
+//heap: in heap when assignment happens it is always by reference that is why orihi=ginal value gets change
+
+let userOne={
+    email:"Subhajyoti@google.com",
+    EmpId:"278999"
+}
+
+let userTwo=userOne;
+console.log(userTwo);
+userTwo.email="sjr@google.com";
+
+console.log(userOne);
+console.log(i=userTwo);
