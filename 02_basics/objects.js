@@ -4,7 +4,7 @@
 
 //singleton --> using constructor
 
-//object literals 
+//object literals :
 
 //create a symbol add it to the object as key and print it : 
 const mySym=Symbol("hellu")
@@ -81,3 +81,122 @@ console.log(jsUser);
 
   console.log(jsUser.greetingstwo());
   //expected output:--hello JS user ,Subhajyoti Roy 
+
+
+//object singleton : using constructor: 
+const tinderUser=new Object() 
+
+console.log(tinderUser);
+//expected output: {}
+
+//non singleton user :
+const tinderUser1 ={}
+
+tinderUser1.id="123abc"
+tinderUser1.name="sammy"
+tinderUser1.isLoggedin=false
+
+console.log(tinderUser1);
+//expected output: -{ id: '123abc', name: 'sammy', isLoggedin: false }
+
+//nested object :
+
+const newUser={
+  email:"some@chatgpt.com",
+  fullname:{
+    username:{
+      firstName:"Subhajyoti",
+      lastName:"Roy"
+    }
+  },
+  age:23
+}
+
+
+// now accessing :
+console.log(newUser.fullname);
+//expected output:{ username: { firstName: 'Subhajyoti', lastName: 'Roy' } }
+
+console.log(newUser.fullname.username);
+//expceted output: { firstName: 'Subhajyoti', lastName: 'Roy' }
+
+console.log(newUser.fullname.username.firstName);
+//expected output:Subhajyoti
+
+//merger to object using spread :
+
+const obj1={1:"a",2:"b"}
+const obj2={3:"c",4:"d"}
+const obj4={5:"e",6:"f"}
+
+
+//without spread : objecy inside another object
+const obj3={obj1,obj2}
+console.log(obj3);
+//expected output:{ obj1: { 1: 'a', 2: 'b' }, obj2: { 3: 'c', 4: 'd' } }
+
+//with spread : it will retun an new object without modifing original ones
+const mergeObj1Obj2={...obj1,...obj2}
+console.log(mergeObj1Obj2);
+
+//expected output: { 1: 'a', 2: 'b', 3: 'c', 4: 'd' }
+
+
+ //concat objects with object.assign({},target,source) :
+
+const obj5=Object.assign({},obj1,obj2,obj4);
+
+console.log(obj5);
+
+//when values from data base use this :
+//when array of object :
+const arrayObj=[
+  {
+    id:1,
+    age:23
+  },
+  {
+    id:2,age:18
+  }
+
+]
+
+//how to access ? 
+console.log(arrayObj[0].id);
+//expected outp:-1
+
+//when we want to get the object's keys in an array to iterate over them :
+//we can use this below method
+
+
+//by object.keys(object_name)
+const tinderKeyArray=Object.keys(tinderUser1)
+console.log(tinderKeyArray);
+console.log(typeof tinderKeyArray);
+//op:object 
+//expected out:[ 'id', 'name', 'isLoggedin' ] now we can iterate over them
+
+
+
+//by Object.values(object_Name)
+
+const tindevaluesArray=Object.values(tinderUser1)
+console.log(tindevaluesArray);
+//expected output: [ '123abc', 'sammy', false ]
+
+//OBject.entries(Object name):-will give [key :values]
+
+console.log(Object.entries(tinderUser1));
+//expected op:-[ [ 'id', '123abc' ], [ 'name', 'sammy' ], [ 'isLoggedin', false ] ]
+
+
+//asking if any property exist inthe object or not 
+
+//Objectname.hasOwnProperty("property name")
+
+console.log(tinderUser1.hasOwnProperty("isLoggedin"));
+//op:true ;
+
+console.log(tinderUser1.hasOwnProperty("isLogged"));
+
+//op:false
