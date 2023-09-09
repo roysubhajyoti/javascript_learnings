@@ -1,8 +1,16 @@
-// function add(a,b)
-// {
-//     console.log(a+b);
-// }
-// add("hello "," world")
+function add1(a,b)
+{
+    console.log(a+b);
+}
+add1("hello "," world")
+ 
+function sayName(){
+    console.log("SUBHAJYOTI");
+}
+
+sayName //this is reference of the function 
+sayName() //this is to execute the function 
+
 
 //with rest paarmeter 
 let add=function sum(...numbers)
@@ -60,3 +68,5 @@ function greeting({city,name})   /*{city,name} ---> this curly braces is for des
 }
 
 greeting({name:"Subhajyoti",city:"kolkata"});  // sending object as argument
+
+
