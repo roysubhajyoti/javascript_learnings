@@ -70,3 +70,16 @@ function greeting({city,name})   /*{city,name} ---> this curly braces is for des
 greeting({name:"Subhajyoti",city:"kolkata"});  // sending object as argument
 
 
+ function loginUserMessage(username="Subha"){
+    if(!username )
+    {
+        console.log("please enter a username");
+        return
+    }
+    return `${username} just logged in`
+ }
+
+ console.log(loginUserMessage("SUBHAJYOTI"));
+ //expected output: SUBHAJYOTI just logged in 
+ console.log(loginUserMessage());
+ //expected output:Subha just logged in
