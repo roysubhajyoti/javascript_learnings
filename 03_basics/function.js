@@ -83,3 +83,57 @@ greeting({name:"Subhajyoti",city:"kolkata"});  // sending object as argument
  //expected output: SUBHAJYOTI just logged in 
  console.log(loginUserMessage());
  //expected output:Subha just logged in
+
+
+ //shoping cart parameter :
+//method 1: with arguments : 
+ function calcucalteCartPrice(){
+    console.log(arguments);
+    const reduceToarray=Array.from(arguments)
+    let sum=0;
+    for(let i=0;i<reduceToarray.length ;i++)
+        sum +=reduceToarray[i];
+
+        return sum;
+ }
+
+let cartSumValue= calcucalteCartPrice(20,50,500,800,5000)
+console.log(cartSumValue);
+//expected op: 6370
+
+//method 2:using rest parameter(...) 
+
+function cartAddPrice(...numbers){
+    let sum=0;
+    for(let i=0;i<numbers.length ;i++)
+        sum +=numbers[i]
+    return sum;
+}
+
+console.log(cartAddPrice(20,40,80,9000,65));
+//exxpected op: 9205
+
+//how to pass objects into a function
+const user={
+    name:"subha",
+    age:23
+}
+
+function handleObject(anyobject)
+{
+    console.log(`username is ${anyobject.name} and age is ${anyobject.age}`);
+}
+//handleObject(user);
+//expected output:username is Subha and age is 23 
+handleObject({
+    name:"SJR",
+    age:23
+});
+
+//create an array pass it to function and then return 2nd element of that array 
+
+const array2return=[100,200,300,400]
+let arrayElereturn = (anyarray) => anyarray[2]
+
+let ele=arrayElereturn(array2return)
+console.log(ele);
