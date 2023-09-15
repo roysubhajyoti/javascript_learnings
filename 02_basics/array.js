@@ -11,9 +11,21 @@
 4.JavaScript array-copy operations create shallow copies. (All standard built-in copy operations with any JavaScript objects create shallow copies, rather than deep copies).
 
 */
+//using Array literals
 
 const myarr=new Array(1,2,3,4,5);
+//iterate over an array :
+//for of loop:
+    for(let num of myarr)
+    {
+        console.log(`value is ${num}`);
+    }
 
+//using Array constructor
+const hello =new Array(5);
+console.log(hello);
+//expected output it will give empty array of 5 element
+hello.push(5);
 console.log(myarr.length);
 
 //array methods --->
