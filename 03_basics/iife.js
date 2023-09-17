@@ -19,3 +19,20 @@
 ( (name) => console.log(`hello ${name}`))("subha")
 
 //expected output: hello Subha
+
+//reason 1) Does not polute the global object namespace 
+
+const x="whatever";
+const helloWorld =()=> "Hello WORLD !!";
+
+//isolate declaration within the function :
+
+(() => {
+    const x="IIFE whatever";
+    const helloWorld =()=> "Hello IIFE !!";
+    console.log(x);
+    console.log(helloWorld());  
+})();
+
+console.log(x);
+console.log(helloWorld());
