@@ -49,7 +49,7 @@ console.log(map);
 
 //extedted op: 
 /**
-  Map { 'IN' => 'INDIA',
+  Map(3) { 'IN' => 'INDIA',
   'USA' => 'United States Of America',
   'UK' => 'United Kingdom' }
  */
@@ -87,6 +87,7 @@ const myobj={
 }
 
 //forof loop for objects
+
 
 for (const [key,val] of myobj) {
     console.log(key," : ",val);

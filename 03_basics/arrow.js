@@ -104,8 +104,8 @@ wow();
 //return must in case of curly braces 
 //return not used in case of parenthesis
 
-const wow2=(a)=>({usre: "hello world!!"})
+const wow2=(a)=>({user: "hello world!!"})
 
 console.log(wow2(2));
 
-//expected output:{ usre: 'hello world!!' }
+//expected output:{ user: 'hello world!!' }

@@ -45,3 +45,27 @@ expected op:
 */
 
 //forin cant iterate map
+//map :
+
+const map= new Map()
+map.set('IN',"INDIA")
+map.set('AU',"AUSTRALIA")
+map.set('NP',"NEPAL")
+
+console.log(map);
+//op:Map(3) { 'IN' => 'INDIA', 'AU' => 'AUSTRALIA','NP' => 'NEPAL' }
+
+console.log(map.get('IN'));
+
+//in map.get(key) will return the specific element from the map 
+
+for(const key in map)
+{
+    console.log(map[key]);
+}
+
+//can not iterate over map through forin 
+
+//forin --> objects
+
+//forof --> array
