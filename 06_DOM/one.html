@@ -17,11 +17,41 @@
         <input type="password" name="" id="" class="my-5 rounded border-emerald-500 border-2">
 
         <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
         </ul>
     </div>
     
 </body>
 </html>
+
+
+<!--
+    if the color of the list to be yellow through js then 
+
+    1> const listQ = document.querySelectorAll('li')
+
+    here you will get nodelist 
+
+    **always in case of node list try to use forEach ** 
+
+    **although we can convert nodelist to an array then can apply map ect.. ** 
+
+    
+    2> listQ.forEach( (item) => item.style.color ="yellow" ) 
+
+
+
+-->
+
+<!-- 
+    in case of getEleByClassName wiil get HTMLCollection
+    as in HTMLCollection we canot perform any ops like loops hence we need to convert it to an array 
+
+    Array.from(HTMLCollect holder)
+
+    then we can perform many thing like we do in array
+
+ -->
