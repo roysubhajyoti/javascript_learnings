@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM 3 | SJR</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-teal-900 text-white">
+
+    
+</body>
+<script>
+    //to create element 
+
+    const section = document.createElement('section')
+    console.log(section);
+    // to set properties/Atribute
+    section.className = "main"
+    section.id = Math.round(Math.random()*10 + 1)
+
+    section.setAttribute("title","generate title")
+
+    //to style:
+
+    section.style.backgroundColor = "black"
+
+    section.style.margin = "10px";
+    section.style.padding = "15px";
+
+    //to write in to the section :
+   // section.innerHTML = " Subhajyoti Roy "
+
+    //another way to write into the section :
+    let addText = document.createTextNode("Subhajyoti Roy")
+    section.appendChild(addText)
+
+    // to attach to the documents 
+    document.body.appendChild(section)
+
+
+
+
+
+</script>
+</html>
