@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM | SJR</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-teal-800 text-white m-2">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+    
+</body>
+<script>
+    let parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children)
+    /*op  : HTMLCollection */
+    console.log(parent.children[1].innerHTML);
+    //op: tuesday
+
+    for(let i=0 ; i<parent.children.length; i++)
+        console.log(parent.children[i].innerHTML);
+
+        //op: all days name 
+
+    parent.children[1].style.color = "yellow"
+    //op : tuesday will be in yellow color
+     
+    console.log(parent.firstElementChild);
+    //op:<div class="day">Monday</div>
+    console.log(parent.lastElementChild);
+    //op:<div class="day">Thrusday</div>
+
+    //child to parent traverse
+
+    //querySelector is expensive
+    
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    //op:<div class="day">Monday</div>
+
+    console.log(dayOne.parentElement);
+    //op:parent structure 
+
+    console.log(dayOne.nextElementSibling);
+
+    //op:<div class="day" style="color: yellow;">Tuesday</div>
+
+    console.log("NODES : ",parent.childNodes);
+    // op: 
+    //     NodeList(9) [text(line break), div.day, text, div.day, text, div.day, text, div.day, text]
+
+    //     text --> line-breaks if any comment added then also its considered as nodeList also
+
+    
+
+
+
+</script>
+</html>
