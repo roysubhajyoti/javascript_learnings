@@ -12,33 +12,40 @@
 <script>
     //to create element 
 
-    const section = document.createElement('section')
-    console.log(section);
-    // to set properties/Atribute
-    section.className = "main"
-    section.id = Math.round(Math.random()*10 + 1)
+    function createAnewsec(color,text){
+        const section = document.createElement('section')
+        console.log(section);
+        // to set properties/Atribute
+        section.className = "main"
+        section.id = Math.round(Math.random()*10 + 1)
 
-    section.setAttribute("title","generate title")
+        section.setAttribute("title","generate title")
 
-    //to style:
+        //to style:
 
-    section.style.backgroundColor = "black"
+        section.style.backgroundColor = color;
 
-    section.style.margin = "10px";
-    section.style.padding = "15px";
+        section.style.margin = "10px";
+        section.style.padding = "15px";
 
-    //to write in to the section :
-   // section.innerHTML = " Subhajyoti Roy "
+        //to write in to the section :
+    // section.innerHTML = " Subhajyoti Roy "
 
-    //another way to write into the section :
-    let addText = document.createTextNode("Subhajyoti Roy")
-    section.appendChild(addText)
+        //another way to write into the section :
+        let addText = document.createTextNode(text)
+        section.appendChild(addText)
 
-    // to attach to the documents 
-    document.body.appendChild(section)
+        // to attach to the documents 
+        document.body.appendChild(section)
+    }
 
+    const color = ["black","gray","green"];
+    const text = ["Subhajyoti Roy" , "Shreya " ,"SJR"];
 
-
+    for(let i=0 ; i< Math.min(color.length , text.length) ; i++)
+    {
+        createAnewsec(color[i],text[i]);
+    }
 
 
 </script>
