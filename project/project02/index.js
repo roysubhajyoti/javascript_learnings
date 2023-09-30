@@ -32,18 +32,18 @@ form.addEventListener('submit',(e)=>{
         if(Bmi < 18.6 )
         {
             const h3 = document.createElement('h3')
-            h3.appendChild(document.createTextNode('Under Weight = Less than 18.6'))
+            h3.appendChild(document.createTextNode('Under Weight '))
             result.appendChild(h3)
         }
         else if(Bmi>=18.6 && Bmi<=24.9)
         {
             const h3 = document.createElement('h3')
-            h3.appendChild(document.createTextNode('Normal Range =18.6 and 24.9'))
+            h3.appendChild(document.createTextNode(' Normal Range '))
             result.appendChild(h3)
         }
         else{
             const h3 = document.createElement('h3')
-            h3.appendChild(document.createTextNode('Overweight = Greater than 24.9'))
+            h3.appendChild(document.createTextNode('Overweight '))
             result.appendChild(h3)
 
         }
