@@ -1,4 +1,4 @@
 .vscode
 tailwind.config.js
 input.css
-dist
+dist/output.css
