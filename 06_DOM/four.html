@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | SJR</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-gray-900 text-white m-4">
+    <ul class="language">
+        <li>
+            Javascript
+        </li>
+    </ul>
+</body>
+<script>
+
+    //how to add a list item
+
+    function addLanguage(langName){
+        //create a list element
+        const list = document.createElement('li')
+
+        //adding content
+        list.innerHTML = `${langName}`;
+
+        document.querySelector('.language').
+        appendChild(list)
+    }
+
+    addLanguage('python')
+    addLanguage('TypeScript')
+    //in the above method tree traversed every time hence it is not optimised
+    
+    //now optimised
+
+    function addOptiLanguage(langName)
+    {
+        const list = document.createElement('li');
+
+        list.appendChild( document.createTextNode(langName))
+
+        document.querySelector('.language').appendChild(list)
+    }
+    addOptiLanguage("golang")
+
+    //edit values
+
+    const second_lang = document.querySelector('li:nth-child(2)')
+
+    //second_lang.innerHTML="cpp"
+
+    //another way
+
+    const li= document.createElement('li')
+    li.appendChild(document.createTextNode("cpp"))
+    second_lang.replaceWith(li)
+
+    //edit 
+    const firstLang =document.querySelector('li')
+    const thirdLang = document.querySelector('li:nth-child(3)');
+    console.log(thirdLang);
+    firstLang.replaceWith(thirdLang);
+
+    // remove last child : 
+
+    const lastLang = document.querySelector('li:last-child');
+
+    lastLang.remove();
+
+</script>
+</html>
