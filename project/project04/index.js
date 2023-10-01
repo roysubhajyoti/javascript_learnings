@@ -55,12 +55,12 @@ function checkGuess(guess)
     }else if(random < guess)
     {
         displayMessage(`you guessed too higher number`)
-        
+
     }else{
         displayMessage(`you guessed too low number`)
 
     }
-        
+
 }
 
 function displayGuess(guess)
@@ -85,8 +85,6 @@ function endGame()
     startOver.appendChild(p)
     playGame = false
     newGame()
-    
-
 }
 
 function newGame()
@@ -102,7 +100,6 @@ function newGame()
     remaining.innerText = `${11 -numGuess}`
     userInput.removeAttribute('disabled')
     startOver.removeChild(p);
-    
     playGame =true
 
 
