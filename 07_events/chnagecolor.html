@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="../dist/output.css">
 </head>
 <body>
-    <div class="cintainer h-screen w-full flex justify-center items-center" >
+    <div class="cintainer h-screen w-full flex justify-center items-center flex-col gap-3" >
         <button id="btn" class="border-2 px-4 py-1 rounded-lg bg-gradient-to-tr from-cyan-500 to-fuchsia-500 "> Change Color </button>
+        <h1 class="font-bold">Enter any thing in the input field :</h1>
+        <input id="textBox" type="text" class="border-2 border-black rounded-md text-center text-black " />
+        <div id="output"></div>
     </div>
     
+    
+
     
 </body>
 <script>
@@ -21,14 +26,35 @@
     //click on button to change color
     btn.addEventListener('click', (e) => {
         const Rgb = `rgb(${random(255)}, ${random(255)}, ${random(255)})`
-        document.body.style.backgroundColor = Rgb;
+        //document.body.style.backgroundColor = Rgb;
+        e.target.style.backgroundColor = Rgb;
     })
 
     //click on body to chnage color
+    /*
     document.body.addEventListener('click', (e) => {
         const Rgb = `rgb(${random(255)}, ${random(255)}, ${random(255)})`
         document.body.style.backgroundColor = Rgb;
     })
+    */
+
+    //now lets use onClick 
+    /*
+    function bgChange() {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+    }
+
+    btn.onclick = bgchnage
+
+    */
+
+    const textBox = document.querySelector("#textBox");
+    const output = document.querySelector("#output");
+    textBox.addEventListener("keydown", (event) => {
+        output.textContent = `You pressed "${event.key}".`;
+    });
+
 
 </script>
 </html>
