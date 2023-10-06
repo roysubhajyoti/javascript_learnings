@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-gray-500">
+    <h1 class="text-3xl font-semibold font-mono">Hello World !!</h1>
+    <h2 class="mt-2 mb-2 font-mono text-xl ">I'm Subhajyoti Roy</h2>
+    <button id="btn" class="border-2 px-6 py-1 rounded-lg bg-gradient-to-tr from-cyan-500 to-fuchsia-500 m-3">STOP</button>
+</body>
+<script>
+    let changeText = ()=>{
+        document.querySelector('h1').textContent = "Hello Hello Najre Screen Par !!"
+    }
+    let setout = setTimeout(changeText,2000);
+
+    let btn = document.getElementById('btn')
+    //how to control it via stop button that it does not change the text
+
+    btn.addEventListener('click', (e)=>{
+        clearInterval(setout);
+        console.log("stopped");
+        e.target.textContent = "STOPPED";
+        if(e.target.textContent === "STOPPED")
+        {
+           e.target.disabled = true;
+           
+        }
+
+       
+
+    })
+
+</script>
+</html>
