@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background color Randomly</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <div class="cintainer h-screen w-full flex justify-center items-center" >
+        <button id="btn" class="border-2 px-4 py-1 rounded-lg bg-gradient-to-tr from-cyan-500 to-fuchsia-500 "> Change Color </button>
+    </div>
+    
+    
+</body>
+<script>
+    let btn = document.getElementById('btn');
+    
+    let random = (num)=>(Math.floor(Math.random()*(num + 1)));
+
+    //click on button to change color
+    btn.addEventListener('click', (e) => {
+        const Rgb = `rgb(${random(255)}, ${random(255)}, ${random(255)})`
+        document.body.style.backgroundColor = Rgb;
+    })
+
+    //click on body to chnage color
+    document.body.addEventListener('click', (e) => {
+        const Rgb = `rgb(${random(255)}, ${random(255)}, ${random(255)})`
+        document.body.style.backgroundColor = Rgb;
+    })
+
+</script>
+</html>
