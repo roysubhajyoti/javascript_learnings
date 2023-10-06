@@ -21,7 +21,7 @@
     //how to control it via stop button that it does not change the text
 
     btn.addEventListener('click', (e)=>{
-        clearInterval(setout);
+        clearTimeout(setout);
         console.log("stopped");
         e.target.textContent = "STOPPED";
         if(e.target.textContent === "STOPPED")
