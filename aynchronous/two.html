@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventloop part2</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-gray-500">
+    <h1 class="text-3xl font-semibold font-mono">Hello World !!</h1>
+    <h2 class="mt-2 mb-2 font-mono text-xl ">I'm Subhajyoti Roy</h2>
+    <button id="stop" class="border-2 px-6 py-1 rounded-lg bg-gradient-to-tr from-cyan-500 to-fuchsia-500 m-3">stop</button>
+    <button id="start" class="border-2 px-6 py-1 rounded-lg bg-gradient-to-tr from-yellow-100 to-red-500 m-3 border-black">start</button>
+</body>
+<script>
+    //repeat the same work at an interval 
+  const sayDate= (str)=>{
+    console.log(`${str}` ,Date.now());
+   }
+//   let inter =  setInterval(sayDate,1000 ,"Subhajyoti")
+   //we can even pass parameter
+
+   
+
+   const start = document.getElementById("start")
+
+   start.addEventListener("click",(e)=>{
+        let inter = setInterval(sayDate,1000 ,"Subhajyoti");
+        e.target.textContent = "started"
+        e.target.disabled = true;
+        //start clicked and disabled hence now we have to enable stop button
+        if(document.getElementById('stop').disabled === true){
+
+            document.getElementById('stop').disabled = false;
+            document.getElementById('stop').textContent = "stop";
+        }
+       
+
+        if(e.target.disabled === true)
+        {
+            const stop = document.getElementById('stop');
+
+            stop.addEventListener("click",(e)=>{
+                clearInterval(inter);
+                e.target.textContent = "stopped";
+                e.target.disabled = true;
+
+                document.getElementById("start").textContent = "start"
+                document.getElementById("start").disabled = false;
+        
+            })
+        }
+   })
+
+
+</script>
+</html>
