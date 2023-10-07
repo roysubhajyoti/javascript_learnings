@@ -8,9 +8,9 @@ let rgby = (num)=>{
 }
 
 const start = document.getElementById("start")
-
+let interval;
 start.addEventListener("click",(e)=>{
-    let interval = setInterval(rgby,1000,255)
+    interval = setInterval(rgby,1000,255)
 
     e.target.disabled = true ;
     e.target.textContent = "started";
@@ -22,17 +22,19 @@ start.addEventListener("click",(e)=>{
         document.getElementById('stop').textContent = "stop";
     }
 
-    const stop = document.getElementById("stop")
-    stop.addEventListener("click",(e)=>{
-        document.body.style.backgroundColor = rgby;
-        clearInterval(interval);
-        e.target.disabled = true ;
-        e.target.textContent = "stopped";
-        start.disabled = false;
-        start.textContent ="start";
+})
 
+const stop = document.getElementById("stop")
+stop.addEventListener("click",(e)=>{
+    
+    clearInterval(interval);
+    interval = null;
+    e.target.disabled = true ;
+    e.target.textContent = "stopped";
 
-    })
+    start.disabled = false;
+    start.textContent ="start";
+
 
 })
 
