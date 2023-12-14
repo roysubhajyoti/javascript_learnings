@@ -11,7 +11,7 @@ const mySym=Symbol("hellu")
 const jsUser = {
     name:"Subhajyoti",
     "full name":"Subhajyoti Roy",
-    [mySym]:"hahahha", //remeber this su=ymbol syntax
+    [mySym]:"hahahha", //remeber this symbol syntax
     age:23,
     location:"kolkata",
     email:"subhajyoti@google.com",
@@ -40,6 +40,7 @@ console.log(jsUser[mySym]);
 jsUser.email="subhajyoti@microsoft.com"
 // to freez any further updates on the data :-
 //Object.freeze(jsUser);
+
 //commenting freez to add greet function
 jsUser.email="subhajyoti@amazon.com"
 console.log(jsUser);
@@ -148,9 +149,9 @@ const obj5=Object.assign({},obj1,obj2,obj4);
 
 console.log(obj5);
 
-//when values from data base use this :
+//when values from database use this :
 //when array of object :
-const arrayObj=[
+const arrayOfObjects=[
   {
     id:1,
     age:23
@@ -162,7 +163,7 @@ const arrayObj=[
 ]
 
 //how to access ? 
-console.log(arrayObj[0].id);
+console.log(arrayOfObjects[0].id);
 //expected outp:-1
 
 //when we want to get the object's keys in an array to iterate over them :
@@ -190,7 +191,7 @@ console.log(Object.entries(tinderUser1));
 //expected op:-[ [ 'id', '123abc' ], [ 'name', 'sammy' ], [ 'isLoggedin', false ] ]
 
 
-//asking if any property exist inthe object or not 
+//asking if any property exist in the object or not 
 
 //Objectname.hasOwnProperty("property name")
 
