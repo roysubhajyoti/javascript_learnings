@@ -46,3 +46,9 @@ function deepCopy(obj) {
 }
 
 const user4 = deepCopy(user1);
+
+function hello() {
+  let str = "Subha";
+  console.log(str);
+}
+hello();

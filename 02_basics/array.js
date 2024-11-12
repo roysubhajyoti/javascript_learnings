@@ -3,7 +3,7 @@
 //const myArr=[0,1,2,3,6,5,true,"subha"];
 
 /*
-1. arrays are resizeable and can contain a mix of different data types
+1. arrays can be Resized and can contain a mix of different data types
 
 2.JavaScript arrays are not associative arrays and so, array elements cannot be accessed using arbitrary strings as indexes.
 
@@ -13,16 +13,15 @@
 */
 //using Array literals
 
-const myarr=new Array(1,2,3,4,5);
+const myarr = new Array(1, 2, 3, 4, 5);
 //iterate over an array :
 //for of loop:
-    for(let num of myarr)
-    {
-        console.log(`value is ${num}`);
-    }
+for (let num of myarr) {
+  console.log(`value is ${num}`);
+}
 
 //using Array constructor
-const hello =new Array(5);
+const hello = new Array(5);
 console.log(hello);
 //expected output it will give empty array of 5 element
 hello.push(5);
@@ -36,7 +35,7 @@ myarr.pop();
 console.log(myarr);
 
 //unshift() --> add element in the start of the array
-myarr.unshift(10); //not optimised add need to shift all the values.. O(n)
+myarr.unshift(10); //not optimized add need to shift all the values.. O(n)
 console.log(myarr);
 
 //shift() --->Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
@@ -53,109 +52,99 @@ console.log(myarr.includes(10));
 //indexof()
 
 console.log(myarr.indexOf(0));
-//if not present it will retun -1 else will return index  like below
+//if not present it will return -1 else will return index  like below
 console.log(myarr.indexOf(8));
 
-//join() : 
+//join() :
 
-const myarr2=myarr.join()
-
+const myarr2 = myarr.join();
 
 //join() -->Adds all the elements of an array into a string, separated by the specified separator string.
 
-
 console.log(myarr);
 console.log(myarr2);
-//op:- 1,2,3,4,5,8 
+//op:- 1,2,3,4,5,8
 console.log(typeof myarr2);
-//op:string 
-
+//op:string
 
 //slice
 
-const narray1=myarr.slice(0,3)
+const narray1 = myarr.slice(0, 3);
 console.log(narray1);
 //op1:-[1,2,3]
 //form 0index to (end-1)index array returns
 console.log(myarr);
 //op:-[1,2,3,4,5,8]
 
-//splice :- its manupulates the original array and remove the splice portion and return a array
+//splice :- its manipulates the original array and remove the splice portion and return a array
 
-let spliceArray=myarr.splice(1,3)
+let spliceArray = myarr.splice(1, 3);
 
-console.log("splice : ",spliceArray);
+console.log("splice : ", spliceArray);
 //op-splice :  [ 2, 3, 4 ]
 
-console.log("myarr : ",myarr);
+console.log("myarr : ", myarr);
 //op:-myarr :  [ 1, 5, 8 ]
-
-
 
 //lets play with strings array
 
-const myGods=["krishna","Shiva","Jagganath"]
+const myGods = ["krishna", "Shiva", "Jagganath"];
 
-const myGods2=["Hamunaji","Ram","DurgaMaa"]
+const myGods2 = ["Hanumanji", "Ram", "DurgaMaa"];
 
 //push : -
 myGods.push(myGods2);
 
 console.log(myGods);
-/*op:-[ 'krishna', 'Shiva', 'Jagganath', [ 'Hamunaji', 'Ram', 'DurgaMaa' ] ]
-*/
+/*op:-[ 'krishna', 'Shiva', 'Jagganath', [ 'Hanumanji', 'Ram', 'DurgaMaa' ] ]
+ */
 
 console.log(myGods[3]);
-//op:-[ 'Hamunaji', 'Ram', 'DurgaMaa' ] 
+//op:-[ 'Hanumanji', 'Ram', 'DurgaMaa' ]
 
-// so if we push an array it will be just another value in the main array 
- 
+// so if we push an array it will be just another value in the main array
+
 //merger will not happen
 
 console.log(myGods[3][2]);
 //op:-DurgaMaa
-//not a good syntax to acces 
-
-
+//not a good syntax to access
 
 // using concat : -Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
+const marvel_heros = ["IronMan", "CP america", "Thor"];
 
-const marvel_heros=["Ironman","CP america","Thor"]
+const dc_heros = ["Batman-Nolan", "Superman", "flash"];
 
-const dc_heros=["Batman-Nolan","Superman","flash"]
+const new_heros = marvel_heros.concat(dc_heros);
 
-const new_heros=marvel_heros.concat(dc_heros)
-
-console.log(marvel_heros)
+console.log(marvel_heros);
 //op:["Ironman","CP america","Thor"]
 console.log(dc_heros);
 //op:-["Batman-Nolan","Superman","flash"]
 console.log(new_heros);
 //op:-['Ironman','CPamerica''Batman-Nolan','Batman-Nolan''Superman','flash']
 
-
 //spread : [...arryname,...arrayname2,...arrayname3]
-//so same work as concat but in a more easy way 
+//so same work as concat but in a more easy way
 // Spread syntax "expands" an array into its elements
 
-const all_new_heros=[...marvel_heros,...dc_heros];
+const all_new_heros = [...marvel_heros, ...dc_heros];
 
 console.log(all_new_heros);
 
 //flat : The flat() method of Array instances creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
-const new_array=[1,2,3,[4,5,6],7,[8,9,[10,12,13]]]
+const new_array = [1, 2, 3, [4, 5, 6], 7, [8, 9, [10, 12, 13]]];
 
-const derived_new_array=new_array.flat(1);
+const derived_new_array = new_array.flat(1);
 console.log(derived_new_array);
 //expected output: [1,2,3,4,5,6,7,8,9,[10,12,13]]
 //depth -->
 
-const derived_new_array2=new_array.flat(2);
+const derived_new_array2 = new_array.flat(2);
 console.log(derived_new_array2);
 //expected op:- [1,2,3,4,5,6,7,8,9,10,12,13]
-
 
 //eg: on flat() method :
 
@@ -174,32 +163,25 @@ console.log(arr2.flat(2));
 
 console.log(arr2.flat(Infinity));
 // expected output: Array [0, 1, 2, 3, 4, 5]
-//if falt(infinity) --> means it will be flat simple array will not contain any array inside .
+//if flat(infinity) --> means it will be flat simple array will not contain any array inside .
 
-
-//isarray :- if it is a array returns true 
+//isarray :- if it is a array returns true
 console.log(Array.isArray("subhajyoti"));
 //expected output : false
 
-
-//Array.from()-->tatic method creates a new, shallow-copied Array instance from an iterable or array-like object.
+//Array.from()-->static method creates a new, shallow-copied Array instance from an iterable or array-like object.
 
 console.log(Array.from("subhajyoti"));
 //expected op:-[s,u,b,h,a,j,y,o,t,i]
 
-console.log(Array.from([1, 2, 3, 5], (x) => x+x));
+console.log(Array.from([1, 2, 3, 5], (x) => x + x));
 // Expected output: Array [2, 4, 6, 10]
 
-
-
-
-//now from variables to array 
-let score1=100
-let score2=200
-let score3=300
-let score4=400
-let score5=500
+//now from variables to array
+let score1 = 100;
+let score2 = 200;
+let score3 = 300;
+let score4 = 400;
+let score5 = 500;
 //of()--->Returns a new array from a set of elements.A set of elements to include in the new array object.
-console.log(Array.of(score1,score2,score3,score4,score5));
-
-
+console.log(Array.of(score1, score2, score3, score4, score5));
