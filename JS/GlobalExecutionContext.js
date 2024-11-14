@@ -1,5 +1,3 @@
-debugger;
-
 sayHi();
 const userName = "subhajyoti";
 const age = 24;
