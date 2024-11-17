@@ -1,4 +1,3 @@
-debugger;
 console.log("Hoisting");
 console.log(userName);
 var userName = "SJR";
