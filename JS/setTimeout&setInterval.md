@@ -68,3 +68,5 @@ const ideNew = setTimeout(a, 2000, 65, "ouuhuu", { name: "SJR" });
 #### outPut:
 
 ![alt text](image-8.png)
+
+## setTimeout() & setInterval() are not part of JS Engine instead they are part of browser
