@@ -1,15 +1,15 @@
 //object iteration
 
 const myobj = {
-    js:"javasprict",
-    cpp:"c++",
-    rb: "Ruby"
-}
+  js: "javasprict",
+  cpp: "c++",
+  rb: "Ruby",
+};
 
-//forin loop 
+//forin loop
 
 for (const key in myobj) {
-   console.log(`${key} shortcut for ${myobj[key]}`);
+  console.log(`${key} shortcut for ${myobj[key]}`);
 }
 
 /**
@@ -21,11 +21,10 @@ expected output:
 
 // forin for array
 
-const myarr = ["js","java","cpp","c","python"]
+const myarr = ["js", "java", "cpp", "c", "python"];
 
-for(const val in myarr)
-{
-    console.log(val ,": ",myarr[val]);
+for (const val in myarr) {
+  console.log(val, ": ", myarr[val]);
 }
 /**
 expected op:
@@ -38,7 +37,6 @@ expected op:
 
  */
 
-
 /**
  so in forin loop for(const key in object) --> key is picked up and if you want values do object[key] it will give values 
  
@@ -47,24 +45,25 @@ expected op:
 //forin cant iterate map
 //map :
 
-const map= new Map()
-map.set('IN',"INDIA")
-map.set('AU',"AUSTRALIA")
-map.set('NP',"NEPAL")
+const map = new Map();
+map.set("IN", "INDIA");
+map.set("AU", "AUSTRALIA");
+map.set("NP", "NEPAL");
 
 console.log(map);
 //op:Map(3) { 'IN' => 'INDIA', 'AU' => 'AUSTRALIA','NP' => 'NEPAL' }
 
-console.log(map.get('IN'));
+console.log(map.get("IN"));
 
-//in map.get(key) will return the specific element from the map 
+//in map.get(key) will return the specific element from the map
 
-for(const key in map)
-{
-    console.log(map[key]);
-}
+// console.log("here ");
 
-//can not iterate over map through forin 
+// for (const key in map) {
+//   console.log(key, " : ", map[key]);
+// }
+
+//can not iterate over map through forin
 
 //forin --> objects
 

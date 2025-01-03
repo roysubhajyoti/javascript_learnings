@@ -1,6 +1,6 @@
 //foreach  loop (most used)
 
-const coding= new Array("js","ruby","React","NEXT");
+const coding = new Array("js", "ruby", "React", "NEXT");
 console.log(coding);
 //op:-[ 'js', 'ruby', 'React', 'NEXT' ]
 
@@ -14,9 +14,9 @@ console.log(coding);
  item is representing all the values
 
 */
-coding.forEach( function (item) {
-    console.log(item);
-} )
+coding.forEach(function (item) {
+  console.log(item);
+});
 
 /*op:-js
 ruby
@@ -24,27 +24,24 @@ React
 NEXT
 */
 //forEach by arrow function
-coding.forEach((val) => console.log(`hello to ${val}`))
+coding.forEach((val) => console.log(`hello to ${val}`));
 /*op:-js
 ruby
 React
 NEXT
 */
 
+const val = (item) => console.log(`hello ${item}`);
 
-const val=(item)=>console.log(`hello ${item}`);
-
-val("subha")
+val("subha");
 //op: hello subha
-
 
 //can we pass a function as a callback in the forEach loop
 
 //lets see
 
-function printMe(item)
-{
-    console.log(`Hamare iha aisa hi hota hai samjha-> ${item}`);
+function printMe(item) {
+  console.log(`Hamare iha aisa hi hota hai samjha-> ${item}`);
 }
 //in this case we have to pass the reference of the function remember
 coding.forEach(printMe);
@@ -54,7 +51,7 @@ Hamare iha aisa hi hota hai samjha-> ruby
 Hamare iha aisa hi hota hai samjha-> React
 Hamare iha aisa hi hota hai samjha-> NEXT
 */
-coding.forEach((item,index,arr) => console.log(item , index , arr))
+coding.forEach((item, index, arr) => console.log(item, index, arr));
 
 /** 
 op:-
@@ -68,23 +65,24 @@ NEXT 3 [ 'js', 'ruby', 'React', 'NEXT' ]
 
 //[{},{},{}]
 
-const myCode=[
-    {
-        languageName:"javascript",
-        fileName:"js"
-    },
-    {
-        languageName:"java",
-        fileName:"java"
-    },
-    {
-        languageName:"python",
-        fileName:"py"
-    }
-]
+const myCode = [
+  {
+    languageName: "javascript",
+    fileName: "js",
+  },
+  {
+    languageName: "java",
+    fileName: "java",
+  },
+  {
+    languageName: "python",
+    fileName: "py",
+  },
+];
 
-myCode.forEach((key) => 
-    console.log(key.languageName)
-)
+myCode.forEach((key) => console.log(key.languageName));
 
 //op:-javascript java python
+
+// forEach() method do not return anything specifically
+// its returns value is undefined

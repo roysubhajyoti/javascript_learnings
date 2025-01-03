@@ -86,7 +86,20 @@ const myobj = {
 
 //forof loop for objects
 
-for (const [key, val] of myobj) {
-  console.log(key, " : ", val);
-}
+// for (const [key, val] of myobj) {
+//   console.log(key, " : ", val);
+// }
 //expected output: object is not iterable by forof
+
+console.log(myobj);
+
+const iterableObject = Object.keys(myobj); // this is a effective way to iterate over object by making the keys of it as array
+// for big object it is optimal to use like this
+
+const iterableValue = Object.values(myobj);
+const iterableEntries = Object.entries(myobj);
+console.log(iterableObject);
+
+for (const key of iterableObject) {
+  console.log(myobj[key]);
+}
