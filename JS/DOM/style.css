@@ -1,0 +1,21 @@
+.jsClass {
+  color: teal;
+  /* text-decoration-line: none; */
+  font-weight: 700;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.wavy {
+  text-decoration-style: wavy;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 5;
+  border: 1px solid lime;
+  width: max-content;
+}
