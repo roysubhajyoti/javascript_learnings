@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubling & deligation</title>
+    <script src="scripts.js" defer></script>
+    <script src="scripts2.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+      "
+    >
+      <div class="gbox">
+        <div class="pbox">
+          <div class="cbox"></div>
+        </div>
+      </div>
+
+      <div class="videoPlayer">
+        <button>show video</button>
+        <div class="hideVideo">
+          <video>
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+              type="video/webm"
+            />
+            <p>
+              Your browser doesn't support HTML video. Here is a
+              <a href="rabbit320.mp4">link to the video</a> instead.
+            </p>
+          </video>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+  </body>
+</html>

@@ -19,3 +19,25 @@
   border: 1px solid lime;
   width: max-content;
 }
+.container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.card {
+  width: 78px;
+  height: 90px;
+  border-radius: 5px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: aliceblue;
+}
+img {
+  width: 110px;
+  border: 1px solid;
+  border-radius: 5px;
+  background: brown;
+}

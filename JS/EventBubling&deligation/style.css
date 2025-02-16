@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 50px;
+}
+.gbox {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  cursor: pointer;
+}
+
+.pbox {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cbox {
+  height: 100px;
+  width: 100px;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.hideVideo {
+  display: none;
+}
+
+.showvideo {
+  display: block;
+}
+
+.videoPlayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  width: 100%;
+  height: 100vh;
+}
+.tile {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
